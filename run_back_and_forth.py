@@ -31,6 +31,7 @@ def leave(void):
 tk = Tk()
 tk.title("來回跑步")#遊戲視窗標題
 tk.geometry("600x200")#視窗大小
+tk["bg"] = "white"
 
 #定義區
 stop = True
@@ -39,7 +40,7 @@ image={}
 for i in range(0, 7):
     image[i] = ImageTk.PhotoImage(Image.open("man%s.gif" %str(i+1)))#loading 8 picture to dict
 
-canvas = Canvas(tk, width=600,height=88)
+canvas = Canvas(tk, width=600,height=88, bg="white")
 x = canvas.create_image(512,0,anchor=NW,image=image[0])
 canvas.pack()
 
